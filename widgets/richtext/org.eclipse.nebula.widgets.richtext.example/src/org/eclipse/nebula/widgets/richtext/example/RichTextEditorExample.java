@@ -100,6 +100,7 @@ public class RichTextEditorExample {
 
 		// add additional controls for showing interactions
 		createControlPanel(parent, editor);
+		editor.getText();
 	}
 
 	protected void createControlPanel(Composite parent, final RichTextEditor editor) {
@@ -130,6 +131,7 @@ public class RichTextEditorExample {
 		setButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				editor.setText(input.getText());
 				editor.setText(input.getText());
 			}
 		});
